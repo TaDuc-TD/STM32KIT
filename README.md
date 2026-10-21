@@ -1,115 +1,71 @@
-STM32F401 Development Board
-
-
+# STM32F401 Development Board
 
 Bo mạch phát triển tùy chỉnh sử dụng vi điều khiển STM32F401, được thiết kế bằng phần mềm KiCad.
 
+---
 
+## 1. Tổng quan PCB
 
-Tổng quan PCB
+### Mô hình PCB 3D
+![3D PCB](images/KIT_STM32F401.png)
 
-Mô hình PCB 3D
+### Ảnh bo mạch thực tế
+![Bo mạch thực tế](images/V1.png)
 
+---
 
-
-!\[3D PCB]("image\\KIT\_STM32F401.png")
-
-
-
-Ảnh bo mạch thực tế:
-
-!\[Bo mạch thực tế]("image\\V1.png")
-
-
-
-Mô tả dự án
-
-
+## 2. Mô tả dự án
 
 Dự án tập trung vào thiết kế sơ đồ nguyên lý (schematic) và thiết kế mạch in (PCB) cho một bo mạch phát triển dựa trên vi điều khiển STM32F401.
 
-
-
 Bo mạch được phát triển nhằm phục vụ cho việc nghiên cứu hệ thống nhúng, phát triển firmware, giao tiếp ngoại vi, thử nghiệm phần cứng và xây dựng các ứng dụng điều khiển sử dụng vi điều khiển.
 
+---
 
+## 3. Tính năng chính
 
-Tính năng chính
+- Thiết kế schematic và PCB hoàn toàn tùy chỉnh.
+- Sử dụng vi điều khiển dòng STM32F401.
+- Thiết kế và đi dây PCB bằng KiCad.
+- Kiểm tra mô hình 3D để đánh giá bố trí linh kiện và khả năng lắp ráp cơ khí.
 
-Thiết kế schematic và PCB hoàn toàn tùy chỉnh.
+---
 
-Sử dụng vi điều khiển dòng STM32F401.
+## 4. Thông số phần cứng
 
-Thiết kế và đi dây PCB bằng KiCad.
+| Thông số | Giá trị |
+| :--- | :--- |
+| **Vi điều khiển** | STM32F401 Series |
+| **Phần mềm thiết kế** | KiCad (Schematic Editor, PCB Editor, 3D Viewer) |
+| **Nguồn cấp** | 5V DC |
+| **Kích thước PCB** | 100 mm × 100 mm |
+| **Số lớp PCB** | 2 lớp |
+| **Giao tiếp ngoại vi** | 1× RS232 (MAX3232), 1× RS485 (MAX3485), 1× Ethernet (W5500) |
+| **I/O & Ngoại vi khác** | 2× ADC, 4× Button, 5× LED |
 
-Kiểm tra mô hình 3D để đánh giá bố trí linh kiện và khả năng lắp ráp cơ khí.
+---
 
+## 5. Quy trình thiết kế
 
+1. Thiết kế sơ đồ nguyên lý (Schematic).
+2. Lựa chọn linh kiện và gán footprint.
+3. Bố trí linh kiện và đi dây PCB.
+4. Kiểm tra quy tắc thiết kế (DRC).
 
-Thông số phần cứng
+---
 
-Thông số	Giá trịVi điều khiển	STM32F401 Series
+## 6. Công cụ sử dụng
 
-Phần mềm thiết kế PCB	KiCad
+- **KiCad**: Thiết kế nguyên lý, PCB, quản lý footprint và kiểm tra mô hình 3D.
+- **Git**: Quản lý phiên bản mã nguồn cục bộ.
+- **GitHub**: Lưu trữ mã nguồn và tài liệu dự án trực tuyến.
 
-Thiết kế nguyên lý	KiCad Schematic Editor
+---
 
-Thiết kế PCB	KiCad PCB Editor
+## 7. Cấu trúc Repository
 
-Kiểm tra 3D	KiCad 3D Viewer
-
-Nguồn cấp	5VDC
-
-Kích thước PCB	100mmx100mm
-
-Số lớp PCB	2
-
-Giao tiếp truyền thông	1xRS232(MAX3232), 1xRS485(MAX3485), 1xEthernet(W5500), 2ADC, 4xButton, 5xLed
-
-Quy trình thiết kế
-
-Thiết kế sơ đồ nguyên lý (Schematic).
-
-Lựa chọn linh kiện và gán footprint.
-
-Bố trí linh kiện và đi dây PCB.
-
-Kiểm tra quy tắc thiết kế (DRC).
-
-Công cụ sử dụng
-
-KiCad: Thiết kế nguyên lý, thiết kế PCB, quản lý footprint và kiểm tra mô hình 3D.
-
-Git: Quản lý phiên bản dự án cục bộ.
-
-GitHub: Lưu trữ mã nguồn và tài liệu dự án trực tuyến.
-
-Cấu trúc Repository
-
-\*.kicad\_pro : Tệp cấu hình dự án KiCad.
-
-\*.kicad\_sch : Thiết kế sơ đồ nguyên lý.
-
-\*.kicad\_pcb : Thiết kế PCB.
-
-images/ : Hình ảnh PCB và ảnh render 3D.
-
-Trạng thái dự án
-
-
-
-Hoàn thành đã kiểm thử các chức năng cơ bản
-(Note cần sửa lại kết nối LCD D0/D1/D2/D3 -> D4/D5/D6/D7
-
-
-
-Tác giả
-
-
-
-Tạ Đức
-
-
-
-GitHub: TaDuc-TD
-
+```text
+├── *.kicad_pro    # Tệp cấu hình dự án KiCad
+├── *.kicad_sch    # Thiết kế sơ đồ nguyên lý
+├── *.kicad_pcb    # Thiết kế mạch in PCB
+└── images/        # Hình ảnh thực tế và ảnh render 3D
