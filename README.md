@@ -10,7 +10,7 @@ Bo mạch phát triển tùy chỉnh sử dụng vi điều khiển STM32F401, �
 ![3D PCB](images/KIT_STM32F401.png)
 
 ### Ảnh bo mạch thực tế
-![Bo mạch thực tế](images/V1.png)
+![Bo mạch thực tế](images/V1.jpg)
 
 ---
 
